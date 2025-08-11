@@ -212,9 +212,6 @@
   .inline-block {
     display: inline-block;
   }
-  .table {
-    display: table;
-  }
   .h-32 {
     height: calc(var(--spacing) * 32);
   }
@@ -227,17 +224,11 @@
   .w-full {
     width: 100%;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
   .cursor-pointer {
     cursor: pointer;
-  }
-  .resize {
-    resize: both;
   }
   .items-center {
     align-items: center;
@@ -253,10 +244,6 @@
   }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
-  }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
   }
   .border-r-4 {
     border-right-style: var(--tw-border-style);
@@ -343,13 +330,6 @@
   .uppercase {
     text-transform: uppercase;
   }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
   .transition {
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, visibility, content-visibility, overlay, pointer-events;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -416,9 +396,9 @@
       grid-column: span 1 / span 1;
     }
   }
-  .md\:col-span-2 {
+  .md\:col-span-4 {
     @media (width >= 48rem) {
-      grid-column: span 2 / span 2;
+      grid-column: span 4 / span 4;
     }
   }
   .md\:block {
@@ -436,9 +416,9 @@
       display: none;
     }
   }
-  .md\:grid-cols-3 {
+  .md\:grid-cols-5 {
     @media (width >= 48rem) {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(5, minmax(0, 1fr));
     }
   }
   .md\:justify-end {
@@ -463,6 +443,7 @@
 }
 .card {
   position: relative;
+  cursor: pointer;
   overflow: hidden;
   border-radius: 0.25rem;
   background-color: var(--color-white);
@@ -530,11 +511,6 @@
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }
 @property --tw-duration {
   syntax: "*";
@@ -638,7 +614,6 @@
       --tw-skew-y: initial;
       --tw-border-style: solid;
       --tw-font-weight: initial;
-      --tw-outline-style: solid;
       --tw-duration: initial;
       --tw-ease: initial;
       --tw-scale-x: 1;
